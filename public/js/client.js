@@ -39,6 +39,48 @@ messageForm.addEventListener("submit", (e) => {
   inputField.value = "";
 });
 
+let typing = false;
+let typingTimeout;
+
+inputField.addEventListener("input", () => {
+  if (!typing) {
+    typing = true;
+    socket.emit("typing", userName);
+  }
+
+  clearTimeout(typingTimeout);
+  typingTimeout = setTimeout(() => {
+    typing = false;
+    socket.emit("stop typing", userName);
+  }, 1000);
+});
+
+socket.on("typing", (name) => {
+  if (name !== userName) {
+    document.getElementById("typing-indicator").textContent = `${name} is typing...`;
+  }
+});
+
+socket.on("stop typing", (name) => {
+  if (name !== userName) {
+    document.getElementById("typing-indicator").textContent = "";
+  }
+});
+
 socket.on("chat message", (data) => {
   addNewMessage({ user: data.nick, message: data.message });
+});
+
+socket.on("typing", (name) => {
+  console.log(`${name} is typing`);
+  if (name !== userName) {
+    document.getElementById("typing-indicator").textContent = `${name} is typing...`;
+  }
+});
+
+socket.on("stop typing", (name) => {
+  console.log(`${name} stopped typing`);
+  if (name !== userName) {
+    document.getElementById("typing-indicator").textContent = "";
+  }
 });

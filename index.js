@@ -33,4 +33,28 @@ io.on("connection", (socket) => {
   socket.on("chat message", (data) => {
     io.emit("chat message", data);
   });
+
+  socket.on("typing", (name) => {
+  socket.broadcast.emit("typing", name);
+});
+
+socket.on("stop typing", (name) => {
+  socket.broadcast.emit("stop typing", name);
+});
+
+io.on("connection", (socket) => {
+  socket.on("typing", (name) => {
+    socket.broadcast.emit("typing", name);
+  });
+
+  socket.on("stop typing", (name) => {
+    socket.broadcast.emit("stop typing", name);
+  });
+});
+
+  socket.on("stop typing", (name) => {
+    socket.broadcast.emit("stop typing", name);
+  });
+
+  // handle user disconnect
 });
