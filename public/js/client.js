@@ -26,9 +26,16 @@ const messageBox = document.querySelector(".messages__history");
 
 function addNewMessage({ user, message }) {
   const time = new Date().toLocaleTimeString();
-  const html = user === userName
-    ? `<div class="outgoing__message"><p>${message}</p><small>${time}</small></div>`
-    : `<div class="incoming__message"><p><strong>${user}</strong>: ${message}</p><small>${time}</small></div>`;
+  let html = "";
+
+  if (user === "System") {
+    html = `<div class="system__message"><em>${message}</em></div>`;
+  } else if (user === userName) {
+    html = `<div class="outgoing__message"><p>${message}</p><small>${time}</small></div>`;
+  } else {
+    html = `<div class="incoming__message"><p><strong>${user}</strong>: ${message}</p><small>${time}</small></div>`;
+  }
+
   messageBox.innerHTML += html;
 }
 
@@ -55,32 +62,33 @@ inputField.addEventListener("input", () => {
   }, 1000);
 });
 
-socket.on("typing", (name) => {
-  if (name !== userName) {
-    document.getElementById("typing-indicator").textContent = `${name} is typing...`;
-  }
-});
-
-socket.on("stop typing", (name) => {
-  if (name !== userName) {
-    document.getElementById("typing-indicator").textContent = "";
-  }
-});
 
 socket.on("chat message", (data) => {
   addNewMessage({ user: data.nick, message: data.message });
 });
 
+const typingMessages = new Map();
+
 socket.on("typing", (name) => {
-  console.log(`${name} is typing`);
-  if (name !== userName) {
-    document.getElementById("typing-indicator").textContent = `${name} is typing...`;
+  if (name !== userName && !typingMessages.has(name)) {
+    const id = `typing-${name}`;
+    const messageElement = document.createElement("div");
+    messageElement.className = "typing__message";
+    messageElement.id = id;
+    messageElement.innerHTML = `<em>${name} is typing...</em>`;
+    messageBox.appendChild(messageElement);
+    typingMessages.set(name, messageElement);
   }
 });
 
 socket.on("stop typing", (name) => {
-  console.log(`${name} stopped typing`);
-  if (name !== userName) {
-    document.getElementById("typing-indicator").textContent = "";
+  const id = `typing-${name}`;
+  const element = document.getElementById(id);
+  if (element) {
+    element.remove();
+    typingMessages.delete(name);
   }
 });
+
+
+

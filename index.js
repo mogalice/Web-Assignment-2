@@ -23,38 +23,29 @@ io.on("connection", (socket) => {
     socket.userId = username;
     activeUsers.add(username);
     io.emit("new user", [...activeUsers]);
+
+    io.emit("chat message", { nick: "System", message: `${username} joined the chat` });
   });
 
   socket.on("disconnect", () => {
     activeUsers.delete(socket.userId);
     io.emit("user disconnected", socket.userId);
+    io.emit("chat message", { nick: "System", message: `${socket.userId} left the chat` });
   });
 
   socket.on("chat message", (data) => {
     io.emit("chat message", data);
   });
 
-  socket.on("typing", (name) => {
+socket.on("typing", (name) => {
+  console.log(`${name} is typing (received by server)`);
   socket.broadcast.emit("typing", name);
 });
 
 socket.on("stop typing", (name) => {
+  console.log(`${name} stopped typing (received by server)`);
   socket.broadcast.emit("stop typing", name);
 });
-
-io.on("connection", (socket) => {
-  socket.on("typing", (name) => {
-    socket.broadcast.emit("typing", name);
-  });
-
-  socket.on("stop typing", (name) => {
-    socket.broadcast.emit("stop typing", name);
-  });
-});
-
-  socket.on("stop typing", (name) => {
-    socket.broadcast.emit("stop typing", name);
-  });
 
   // handle user disconnect
 });
