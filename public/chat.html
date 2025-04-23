@@ -6,14 +6,25 @@
   <link rel="stylesheet" href="css/demo.css" />
 </head>
 <body>
+
   <div class="sidenav">
+    <a class="nav-items active" href="index.html">Home</a>
+    <a class="nav-items" href="interests.html">Interests</a>
+    <a class="nav-items" href="chat.html">Chat</a>
     <div class="inbox__people">
       <h4>Active users</h4>
+      <ul id="user-list">
+        <!-- User list will be populated here -->
+      </ul>
     </div>
   </div>
 
   <div class="content">
+    <div id="notifications" class="notifications"></div>
+
     <div class="messages__history"></div>
+
+    <div id="typing-indicator" class="typing-indicator"></div>
 
     <form class="message_form">
       <input type="text" class="message_form__input" placeholder="Type a message" />
