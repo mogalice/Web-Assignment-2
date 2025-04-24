@@ -1,5 +1,5 @@
 /* Animation to rotate an element 360 degrees */
-@keyframes planetAn {
+@keyframes orca {
     from {
       transform: rotate(0deg); /* Start with no rotation */
     }
