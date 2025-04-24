@@ -1,3 +1,4 @@
+/* General formatting */
 * {
   padding: 0;
   margin: 0;
@@ -135,12 +136,15 @@ nav .active {
   color: white;
   border: 2px solid white;
   border-radius: 50px;
-  height: 50px;
+  height: 40px;
   width: 250px;
   margin-top: -150px;
   z-index: 2;
   cursor: pointer;
   transition: 0.3s;
+  text-align: center;
+  padding-top: 20px;
+ 
 }
 .hero-btn:hover {
   background-color: white;
@@ -169,16 +173,7 @@ nav .active {
 #about .right-grid {
   align-items: center;
 }
-.section-sub {
-  font-size: 1.5rem;
-  font-weight: 600;
-  letter-spacing: 1px;
-  color: #0000ff;
-  text-transform: capitalize;
-  animation: bottomIn 1s ease-in-out forwards;
-  animation-delay: 0.2s;
-  opacity: 0;
-}
+
 .section-title {
   font-size: 4rem;
   line-height: 1.2;
@@ -191,8 +186,8 @@ nav .active {
   opacity: 0;
 }
 #about .left-grid p,
-#projects .left-grid p {
-  font-size: 18px;
+#milestone .left-grid p {
+  font-size: 22px;
   line-height: 1.8;
   color: rgb(0, 0, 0);
   animation: bottomIn 1s ease-in-out forwards;
@@ -200,8 +195,8 @@ nav .active {
   opacity: 0;
 }
 
-/* Join-us */
-#join-us .content-wrap {
+/* Milestone */
+#milestones .content-wrap {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -209,8 +204,8 @@ nav .active {
   height: 100%;
 }
 
-#join-us p {
-  font-size: 18px;
+#milestones p {
+  font-size: 20px;
   letter-spacing: 1px;
   margin-top: 15px;
   animation: bottomIn 1s ease-in-out forwards;
@@ -258,7 +253,7 @@ nav .active {
 }
 
 .info-content h2 {
-  font-size: 1.8rem;
+  font-size: 36px;
   font-weight: 600;
 }
 
@@ -266,7 +261,7 @@ nav .active {
   color: #ffffff;
   text-decoration: none;
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 22px;
   transition: opacity 0.3s;
   
 }

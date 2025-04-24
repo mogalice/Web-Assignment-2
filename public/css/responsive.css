@@ -1,219 +1,258 @@
-/* Mobile */
+/* Mobile (Max-width: 428px) */
 @media screen and (max-width: 428px) {
-    section {
-      height: auto;
-      padding: 50px 0
-    }
-    .section-box {
-      height: auto;
-    }
-    header {
-      flex-direction: column;
-      gap: 20px;
-    }
-    .header-logo {
-      font-size: 24px;
-      margin: 20px 0;
-    }
-    nav {
-      flex-direction: column;
-      gap: 30px;
-    }
-    .nav-items {
-      font-size: 16px;
-    }
-    .hero-content h3 {
-      font-size: 1.2rem;
-      letter-spacing: 20px;
-    }
-    .hero-content h1 {
-      font-size: 4rem;
-      letter-spacing: 2px;
-      margin-top: 10px;
-      line-height: 1.2;
-      text-align: center;
-      z-index: 1;
-    }
-    .hero-content {
-      padding: 50px 0;
-    }
-    .hero-img {
-      width: 100%;
-      margin-top: 50px;
-      z-index: 1;
-    }
-    .hero-btn {
-      margin-top: 50px;
-    }
-  
-    .content-grid {
-      display: flex;
-      flex-direction: column;
-      height: auto;
-      gap: 50px;
-      padding: 50px 5% ;
-    }
-    .about-img {
-      width: 100%;
-    }
-    .section-title {
-      font-size: 3.2rem;
-      margin-bottom: 20px;
-    }
-  
-    #join-us .content-wrap {
-      padding: 50px 5%;
-    }
-    .input-1 {
-      width: 85%;
-      padding: 0 20px;
-    }
-    .checkbox-wrap {
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      gap: 20px;
-      font-size: 16px;
-    }
-    #join-us .section-title {
-      text-align: center;
-      font-size: 3rem;
-      margin-top: 10px;
-    }
-    .footer-grid {
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-    }
-    .footer-items {
-      font-size: 16px;
-    }
-  
+  section {
+    height: auto; /* Adjust section height to auto for smaller screens */
+    padding: 50px 0; /* Add padding on top and bottom */
   }
-  
-  /* Tab */
-  @media screen and (min-width: 429px) and (max-width: 1279px) {
-    section {
-      height: auto;
-      padding: 50px 0
-    }
-    .section-box {
-      height: auto;
-    }
-    header {
-      flex-direction: column;
-      gap: 20px;
-    }
-    .header-logo {
-      font-size: 24px;
-      margin: 20px 0;
-    }
-    nav {
-      flex-direction: column;
-      gap: 30px;
-    }
-    .nav-items {
-      font-size: 20px;
-    }
-    .hero-content h3 {
-      font-size: 1.8rem;
-      letter-spacing: 25px;
-      margin-top: 30px;
-    }
-    .hero-content h1 {
-      font-size: 6rem;
-      letter-spacing: 2px;
-      margin-top: 30px;
-      line-height: 1.2;
-      text-align: center;
-      z-index: 1;
-    }
-    .hero-content {
-      padding: 50px 0;
-    }
-    .hero-img {
-      width: 100%;
-      margin-top: 50px;
-      z-index: 1;
-    }
-    .hero-btn {
-      margin-top: 50px;
-      font-size: 22px;
-    }
-  
-    .content-grid {
-      display: flex;
-      flex-direction: column;
-      height: auto;
-      gap: 50px;
-      padding: 50px 5% ;
-    }
-    .about-img {
-      width: 100%;
-    }
-    .section-title {
-      font-size: 3.2rem;
-      margin-bottom: 20px;
-    }
-  
-    #join-us .content-wrap {
-      padding: 50px 5%;
-    }
-    .input-1 {
-      width: 85%;
-      padding: 0 20px;
-    }
-    .checkbox-wrap {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      font-size: 20px;
-    }
-    #join-us .section-title {
-      text-align: center;
-      font-size: 3rem;
-      margin-top: 10px;
-    }
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      row-gap: 50px;
-      margin: 0 50px;
-    }
-    .footer-items {
-      font-size: 16px;
-    }
-  
+
+  .section-box {
+    height: auto; /* Set height to auto for responsive scaling */
   }
-  
-  /* lap */
-  @media screen and (min-width: 1280px) and (max-width: 1919px) {
-    .header-logo {
-      font-size: 28px;
-    }
-    .nav-items {
-      font-size: 16px;
-    }
-    .hero-content h3{
-      font-size: 1.7rem;
-    }
-    .hero-content h1 {
-      font-size: 6rem;
-      letter-spacing: 20px;
-    }
-    .hero-img {
-      width: 50%;
-    }
-    .hero-btn {
-      margin-top: -120px;
-    }
-  
-    .section-title {
-      font-size: 3.2rem;
-      margin-bottom: 20px;
-    }
-    #join-us .content-wrap {
-      height: auto;
-    }
-  
+
+  header {
+    flex-direction: column; /* Stack header items vertically */
+    gap: 20px; /* Space between header items */
   }
+
+  .header-logo {
+    font-size: 24px; /* Smaller logo size */
+    margin: 20px 0; /* Margin around logo */
+  }
+
+  nav {
+    flex-direction: column; /* Stack nav items vertically */
+    gap: 30px; /* Space between nav items */
+  }
+
+  .nav-items {
+    font-size: 16px; /* Adjust font size for smaller screens */
+  }
+
+  .hero-content h3 {
+    font-size: 1.2rem; /* Adjust font size for hero heading */
+    letter-spacing: 20px; /* Adjust letter spacing */
+  }
+
+  .hero-content h1 {
+    font-size: 4rem; /* Smaller hero heading */
+    letter-spacing: 2px; /* Adjust letter spacing */
+    margin-top: 10px; /* Adjust margin */
+    line-height: 1.2; /* Adjust line height */
+    text-align: center; /* Center align hero heading */
+    z-index: 1; /* Ensure the heading is above other content */
+  }
+
+  .hero-content {
+    padding: 50px 0; /* Adjust padding */
+  }
+
+  .hero-img {
+    width: 100%; /* Make image width 100% */
+    margin-top: 50px; /* Add margin top */
+    z-index: 1; /* Ensure image is stacked correctly */
+  }
+
+  .hero-btn {
+    margin-top: 50px; /* Add margin top to the button */
+  }
+
+  .content-grid {
+    display: flex;
+    flex-direction: column; /* Stack content items vertically */
+    height: auto; /* Adjust height */
+    gap: 50px; /* Space between content */
+    padding: 50px 5%; /* Padding around the content */
+  }
+
+  .about-img {
+    width: 100%; /* Ensure image is responsive */
+  }
+
+  .section-title {
+    font-size: 3.2rem; /* Adjust section title size */
+    margin-bottom: 20px; /* Space below title */
+  }
+
+  /* Join Us Section Adjustments */
+  #join-us .content-wrap {
+    padding: 50px 5%; /* Padding for join-us section */
+  }
+
+  .input-1 {
+    width: 85%; /* Adjust width of input */
+    padding: 0 20px; /* Add padding to input */
+  }
+
+  .checkbox-wrap {
+    display: flex;
+    justify-content: center; /* Center content */
+    flex-direction: column; /* Stack checkboxes vertically */
+    gap: 20px; /* Space between checkboxes */
+    font-size: 16px; /* Adjust font size */
+  }
+
+  #join-us .section-title {
+    text-align: center; /* Center align title */
+    font-size: 3rem; /* Adjust font size */
+    margin-top: 10px; /* Margin for top spacing */
+  }
+
+  .footer-grid {
+    display: flex;
+    flex-direction: column; /* Stack footer items vertically */
+    gap: 30px; /* Space between footer items */
+  }
+
+  .footer-items {
+    font-size: 16px; /* Adjust font size */
+  }
+}
+
+/* Tab (Min-width: 429px and Max-width: 1279px) */
+@media screen and (min-width: 429px) and (max-width: 1279px) {
+  section {
+    height: auto; /* Set section height to auto for medium screens */
+    padding: 50px 0; /* Padding adjustments */
+  }
+
+  .section-box {
+    height: auto; /* Adjust height of the section box */
+  }
+
+  header {
+    flex-direction: column; /* Stack header items vertically */
+    gap: 20px; /* Add spacing between header items */
+  }
+
+  .header-logo {
+    font-size: 24px; /* Logo size adjustment */
+    margin: 20px 0; /* Margin around the logo */
+  }
+
+  nav {
+    flex-direction: column; /* Stack nav items vertically */
+    gap: 30px; /* Space between nav items */
+  }
+
+  .nav-items {
+    font-size: 20px; /* Adjust nav item font size */
+  }
+
+  .hero-content h3 {
+    font-size: 1.8rem; /* Adjust font size of the sub-heading */
+    letter-spacing: 25px; /* Adjust letter spacing */
+    margin-top: 30px; /* Adjust margin for spacing */
+  }
+
+  .hero-content h1 {
+    font-size: 6rem; /* Larger hero heading */
+    letter-spacing: 2px; /* Adjust letter spacing */
+    margin-top: 30px; /* Add top margin */
+    line-height: 1.2; /* Adjust line-height */
+    text-align: center; /* Center-align the heading */
+    z-index: 1; /* Ensure the heading is above other elements */
+  }
+
+  .hero-content {
+    padding: 50px 0; /* Adjust padding */
+  }
+
+  .hero-img {
+    width: 100%; /* Ensure image width fits container */
+    margin-top: 50px; /* Margin for spacing */
+    z-index: 1; /* Layer stacking */
+  }
+
+  .hero-btn {
+    margin-top: 50px; /* Add margin for button */
+    font-size: 22px; /* Adjust button text size */
+  }
+
+  .content-grid {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    height: auto; /* Adjust height */
+    gap: 50px; /* Space between sections */
+    padding: 50px 5%; /* Padding adjustments */
+  }
+
+  .about-img {
+    width: 100%; /* Ensure the image is responsive */
+  }
+
+  .section-title {
+    font-size: 3.2rem; /* Adjust title size */
+    margin-bottom: 20px; /* Margin for spacing */
+  }
+
+  /* Join Us Section Adjustments */
+  #join-us .content-wrap {
+    padding: 50px 5%; /* Padding for the join-us section */
+  }
+
+  .input-1 {
+    width: 85%; /* Input width adjustment */
+    padding: 0 20px; /* Padding inside input */
+  }
+
+  .checkbox-wrap {
+    display: flex;
+    justify-content: center; /* Center content */
+    gap: 30px; /* Space between checkboxes */
+    font-size: 20px; /* Font size adjustment */
+  }
+
+  #join-us .section-title {
+    text-align: center; /* Center align title */
+    font-size: 3rem; /* Font size for the section title */
+    margin-top: 10px; /* Adjust margin */
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two-column grid for footer */
+    row-gap: 50px; /* Space between rows */
+    margin: 0 50px; /* Margin for spacing */
+  }
+
+  .footer-items {
+    font-size: 16px; /* Font size adjustment */
+  }
+}
+
+/* Laptop (Min-width: 1280px and Max-width: 1919px) */
+@media screen and (min-width: 1280px) and (max-width: 1919px) {
+  .header-logo {
+    font-size: 28px; /* Slightly larger logo */
+  }
+
+  .nav-items {
+    font-size: 16px; /* Font size adjustment */
+  }
+
+  .hero-content h3 {
+    font-size: 1.7rem; /* Adjust size of sub-heading */
+  }
+
+  .hero-content h1 {
+    font-size: 6rem; /* Maintain large hero heading */
+    letter-spacing: 20px; /* Adjust letter spacing */
+  }
+
+  .hero-img {
+    width: 50%; /* Make image half the width */
+  }
+
+  .hero-btn {
+    margin-top: -120px; /* Adjust button position */
+  }
+
+  .section-title {
+    font-size: 3.2rem; /* Section title size */
+    margin-bottom: 20px; /* Space below title */
+  }
+
+  #join-us .content-wrap {
+    height: auto; /* Set content wrap height to auto */
+  }
+}

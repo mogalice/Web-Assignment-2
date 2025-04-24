@@ -1,3 +1,4 @@
+/* General styles for the page */
 * {
   box-sizing: border-box;
 }
@@ -9,8 +10,12 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
 }
 
+/* Left Sidebar */
 .sidenav {
   height: 100%;
   width: 200px;
@@ -58,21 +63,41 @@ body {
   font-size: 14px;
 }
 
-.content {
-  margin-left: 200px;
-  padding: 20px;
-  padding-top: 30px;
+.inbox__people h5 {
+  margin: 0;
 }
 
+.typing-status {
+  color: #888;
+  font-style: italic;
+  font-size: 12px;
+  margin-left: 8px;
+}
+
+/* Content Area */
+.content {
+  margin-left: 200px;
+  margin-right: 200px; /* Added space for the right sidebar */
+  padding: 20px;
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Message History */
 .messages__history {
-  height: 400px;
+  flex-grow: 1;
   overflow-y: auto;
   background-color: rgba(255, 255, 255, 0.8);
   padding: 10px;
   margin-bottom: 10px;
   border-radius: 4px;
+  height: 50%;
+  width: 1000px;
 }
 
+/* Message Form */
 .message_form {
   display: flex;
   gap: 10px;
@@ -89,13 +114,50 @@ body {
   font-size: 16px;
 }
 
-.notifications {
-  background-color: #f9f9f9;
-  padding: 10px;
-  margin-bottom: 10px;
+/* Typing Indicator */
+#typing-indicator {
+  position: fixed;
+  bottom: 10px;
+  left: 220px;
+  color: #888;
   font-style: italic;
-  border-left: 4px solid #2196F3;
-  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* Right Sidebar (New Sidebar) */
+.right-sidenav {
+  height: 100%;
+  width: 400px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  color: white;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.right-sidenav h4 {
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.conversation-starters {
+  list-style-type: none;
+  padding: 0;
+}
+
+.conversation-starters li {
+  padding: 10px;
+  border-bottom: 1px solid #444;
+}
+
+.conversation-starters li:hover {
+  background-color: #575757;
+  cursor: pointer;
 }
 
 .modal {
@@ -139,8 +201,4 @@ body {
   margin: 10px 0;
 }
 
-.typing__message {
-  color: gray;
-  font-style: italic;
-  margin-top: 5px;
-}
+
