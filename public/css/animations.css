@@ -1,10 +1,10 @@
 /* Animation to rotate an element 360 degrees */
 @keyframes orca {
     from {
-      transform: rotate(0deg); /* Start with no rotation */
+      transform: rotate(0deg); /* no rotation */
     }
     to {
-      transform: rotate(360deg); /* End with a full 360-degree rotation */
+      transform: rotate(360deg); /* full 360-degree rotation */
     }
   }
   
@@ -14,8 +14,8 @@
       transform: translateY(500px);  /* Start 500px below its final position */
     }
     to {
-      transform: translateY(0); /* Move to its final position */
-      opacity: 1;  /* Fade in to full visibility */
+      transform: translateY(0); /* final position */
+      opacity: 1;  /* Fade to full visibility */
     }
   }
   
@@ -25,7 +25,7 @@
       transform: scale(0);
     }
     to {
-      transform: scale(1); /* Scale up to full size */
+      transform: scale(1); /* Scale to full size */
       opacity: 1;
     }
   }

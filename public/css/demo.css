@@ -52,7 +52,7 @@ body {
   color: white;
   padding: 16px;
   flex-grow: 1;
-  overflow-y: auto; /* Enables vertical scroll if needed */
+  overflow-y: auto; /* vertical scroll */
 }
 
 .inbox__people ul {
@@ -81,7 +81,7 @@ body {
 /* Content Area */
 .content {
   margin-left: 200px;
-  margin-right: 200px; /* Added space for the right sidebar */
+  margin-right: 200px; /*space for the right sidebar */
   padding: 20px;
   padding-top: 30px;
   display: flex;
@@ -104,7 +104,7 @@ body {
 /* Message input form container */
 .message_form {
   display: flex;
-  gap: 10px;  /* Space between input and button */
+  gap: 10px;  /* Space input and button */
 }
 
 /* Text input for message */

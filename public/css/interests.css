@@ -4,45 +4,46 @@
   margin: 0;
   outline: none;
   border: none;
-  font-family: "Poppins", sans-serif; /* Set a clean, modern font */
-  color: white; /* Default text color set to white */
+  font-family: sans-serif; /* Set font */
+  color: white; /* Default white */
 }
 
 /* Body Styles */
 body {
-  background-color: black; /* Set background color to black */
+  background-color: black;
 }
 
 /* Section Styles */
 section {
   display: flex;
-  justify-content: center; /* Center content horizontally */
-  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
   width: 100%;
   height: 100vh; /* Full viewport height */
 }
 
+/* background section */
 section {
-  background-image: url(../images/wave2.jpeg); /* Background image for section */
-  background-position: center; /* Center background image */
-  background-size: cover; /* Ensure the image covers the whole section */
-  background-repeat: no-repeat; /* Prevent background from repeating */
+  background-image: url(../images/wave2.jpeg); 
+  background-position: center; 
+  background-size: cover; /* image covers the whole section */
+  background-repeat: no-repeat; /* Prevent repeating */
 }
 
-/* Section Box - Container with background blur and rounded corners */
+/* transparent background containers */
 .section-box {
   background-color: rgba(255, 255, 255, 0.15); /* Semi-transparent white background */
-  backdrop-filter: blur(8px); /* Apply blur effect to background */
-  border: 2px solid rgba(255, 255, 255, 0.2); /* Light border for section box */
-  box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.2); /* Subtle inner shadow */
+  backdrop-filter: blur(8px); 
+  border: 2px solid rgba(255, 255, 255, 0.2); 
+  box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.2); 
   border-radius: 30px; /* Rounded corners */
-  height: 85vh; /* 85% of the viewport height */
-  width: 85%; /* 85% of the viewport width */
-  overflow: hidden; /* Hide overflow content */
+  height: 85vh; 
+  width: 85%; 
+  overflow: hidden; /* no content leakage */
 }
 
 .content-wrap {
-  padding: 20px 50px; /* Add padding around content */
+  padding: 20px 50px; /* Added borders */
 }
 
 /* Header Styles */
@@ -53,14 +54,14 @@ header {
 }
 
 .header-logo {
-  font-size: 32px; /* Set logo size */
-  font-weight: 600; /* Make the font bold */
-  letter-spacing: 1px; /* Space between letters */
-  text-transform: uppercase; /* Uppercase letters */
+  font-size: 32px; 
+  font-weight: 600; /* font bold */
+  letter-spacing: 1px; 
+  text-transform: uppercase; 
 }
 
 .header-logo span {
-  color: #0000ff; /* Highlighted color for part of the logo */
+  color: #0000ff; /* applied to part of the logo */
 }
 
 /* Navigation Styles */
@@ -68,19 +69,19 @@ nav {
   display: flex;
   align-items: center;
   gap: 40px; /* Space between nav items */
-  z-index: 2; /* Ensure nav stays above other elements */
+  z-index: 2; /* nav stays above other elements */
 }
 
 .nav-items {
-  font-size: 18px; /* Font size for nav items */
-  font-weight: 500; /* Medium weight */
-  letter-spacing: 1px; /* Letter spacing */
-  text-transform: capitalize; /* Capitalize each word */
+  font-size: 18px; 
+  font-weight: 500; /* Medium bold weight */
+  letter-spacing: 1px; 
+  text-transform: capitalize; 
   cursor: pointer; /* Pointer cursor on hover */
-  transition: 0.3s; /* Smooth transition for hover effect */
+  transition: 0.3s; /* Smoothes hover effect */
   position: relative;
   display: flex;
-  justify-content: center; /* Center text inside nav item */
+  justify-content: center; /* Center text in nav item */
 }
 
 /* Active state for nav items */
@@ -92,14 +93,14 @@ nav .active {
 .nav-items::after {
   content: '';
   position: absolute;
-  bottom: -10px; /* Position the underline below the nav item */
-  width: 100%; /* Full width of the nav item */
-  height: 2px; /* Set height of underline */
-  background-color: white; /* White underline */
-  box-shadow: 0 0 5px white; /* Soft shadow on the underline */
+  bottom: -10px; /* Position underline below nav*/
+  width: 100%; /* Full width of item */
+  height: 2px; 
+  background-color: white; 
+  box-shadow: 0 0 5px white; /* slight shadow */
   transform: scale(0); /* Initially hide the underline */
-  transform-origin: left; /* Start the scaling from the left */
-  transition: 0.3s; /* Smooth transition */
+  transform-origin: left; 
+  transition: 0.3s; 
 }
 
 /* Hover effect for nav items */
@@ -117,15 +118,15 @@ nav .active {
 .content-grid {
   display: grid;
   grid-template-columns: 1fr 1fr; /* Two-column grid layout */
-  height: 100%; /* Ensure full height */
+  height: 100%; 
   padding: 0 50px; /* Horizontal padding */
 }
 
 .about-img {
   width: 90%; /* Make the image 90% of the container width */
   animation: zoomIn 1.4s ease-in-out forwards; /* Image animation */
-  animation-delay: 0.2s; /* Delay the animation */
-  opacity: 0; /* Initially set opacity to 0 */
+  animation-delay: 0.2s; 
+  opacity: 0; 
 }
 
 .left-grid,
@@ -142,37 +143,37 @@ nav .active {
 /* Section Sub-heading Styles */
 .section-sub {
   font-size: 1.5rem; /* Font size for sub-heading */
-  font-weight: 600; /* Bold weight */
-  letter-spacing: 1px; /* Spacing between letters */
-  color: #0000ff; /* Blue color */
-  text-transform: capitalize; /* Capitalize words */
-  animation: bottomIn 1s ease-in-out forwards; /* Animation for bottom-in effect */
-  animation-delay: 0.2s; /* Delay for animation */
-  opacity: 0; /* Initially hidden */
+  font-weight: 600; 
+  letter-spacing: 1px; 
+  color: #0000ff; 
+  text-transform: capitalize; 
+  animation: bottomIn 1s ease-in-out forwards; 
+  animation-delay: 0.2s; 
+  opacity: 0; 
 }
 
 /* Section Title Styles */
 .section-title {
-  font-size: 4rem; /* Large title size */
-  line-height: 1.2; /* Line height for title */
-  font-weight: 800; /* Extra bold title */
-  letter-spacing: 1px; /* Spacing between letters */
-  text-transform: uppercase; /* Uppercase letters */
-  margin-bottom: 20px; /* Space below title */
+  font-size: 4rem; 
+  line-height: 1.2; 
+  font-weight: 800; 
+  letter-spacing: 1px; 
+  text-transform: uppercase; 
+  margin-bottom: 20px; 
   animation: bottomIn 1s ease-in-out forwards; /* Animation for title */
-  animation-delay: 0.3s; /* Delay the animation */
-  opacity: 0; /* Initially hidden */
+  animation-delay: 0.3s; 
+  opacity: 0; 
 }
 
 /* Paragraph styles inside left-grid (About and Studies sections) */
 #about .left-grid p,
 #studies .left-grid p {
-  font-size: 18px; /* Set paragraph font size */
-  line-height: 1.8; /* Set line height for readability */
-  color: rgb(0, 0, 0); /* Set text color to black */
+  font-size: 18px; 
+  line-height: 1.8; 
+  color: rgb(0, 0, 0); 
   animation: bottomIn 1s ease-in-out forwards; /* Animation for text */
-  animation-delay: 0.4s; /* Delay animation */
-  opacity: 0; /* Initially set opacity to 0 */
+  animation-delay: 0.4s; 
+  opacity: 0; 
 }
 
 /* Extra Section Styles */
@@ -181,13 +182,13 @@ nav .active {
   flex-direction: column;
   align-items: center; /* Center items horizontally */
   justify-content: center; /* Center items vertically */
-  height: 100%; /* Full height */
+  height: 100%; 
 }
 
 #extra p {
-  font-size: 18px; /* Font size for text */
-  letter-spacing: 1px; /* Space between letters */
-  margin-top: 15px; /* Space on top */
+  font-size: 18px; 
+  letter-spacing: 1px; 
+  margin-top: 15px; 
   animation: bottomIn 1s ease-in-out forwards; /* Animation for bottom-in effect */
   opacity: 0; /* Initially hidden */
   animation-delay: 0.6s; /* Delay animation */
@@ -198,14 +199,14 @@ nav .active {
   display: flex;
   gap: 2rem; /* Space between columns */
   flex-wrap: wrap; /* Allow wrapping on small screens */
-  padding: 100px; /* Padding around columns */
+  padding: 100px; 
 }
 
 .column {
   flex: 1; /* Flex grow for columns */
-  min-width: 250px; /* Minimum width for responsive design */
+  min-width: 250px; /* Minimum for responsive design */
 }
 
 .column-img {
-  width: 800px; /* Set image width */
+  width: 800px; /*image width */
 }
