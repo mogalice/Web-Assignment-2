@@ -1,28 +1,31 @@
+/* Animation to rotate an element 360 degrees */
 @keyframes planetAn {
     from {
-      transform: rotate(0deg);
+      transform: rotate(0deg); /* Start with no rotation */
     }
     to {
-      transform: rotate(360deg);
+      transform: rotate(360deg); /* End with a full 360-degree rotation */
     }
   }
   
+  /* Animation to slide an element in from the bottom and fade it in */
   @keyframes bottomIn {
     from {
-      transform: translateY(500px);
+      transform: translateY(500px);  /* Start 500px below its final position */
     }
     to {
-      transform: translateY(0);
-      opacity: 1;
+      transform: translateY(0); /* Move to its final position */
+      opacity: 1;  /* Fade in to full visibility */
     }
   }
   
+  /* Animation to scale an element from 0 to full size and fade it in */
   @keyframes zoomIn {
     from {
       transform: scale(0);
     }
     to {
-      transform: scale(1);
+      transform: scale(1); /* Scale up to full size */
       opacity: 1;
     }
   }

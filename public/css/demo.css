@@ -11,7 +11,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   height: 100vh;
-  display: flex;
+  display: flex; /* Enables flexbox layout */
   flex-direction: row;
 }
 
@@ -20,7 +20,7 @@ body {
   height: 100%;
   width: 200px;
   position: fixed;
-  z-index: 1;
+  z-index: 1; /* Stays on top of other elements */
   top: 0;
   left: 0;
   background-color: #111;
@@ -29,6 +29,7 @@ body {
   flex-direction: column;
 }
 
+/* Navigation links in sidebar */
 .nav-items {
   color: white;
   padding: 16px;
@@ -41,15 +42,17 @@ body {
   color: black;
 }
 
+/* Active nav item styling */
 .nav-items.active {
   background-color: #575757;
 }
 
+/* Container for user list or people in chat */
 .inbox__people {
   color: white;
   padding: 16px;
   flex-grow: 1;
-  overflow-y: auto;
+  overflow-y: auto; /* Enables vertical scroll if needed */
 }
 
 .inbox__people ul {
@@ -67,6 +70,7 @@ body {
   margin: 0;
 }
 
+/* Typing status styling */
 .typing-status {
   color: #888;
   font-style: italic;
@@ -97,24 +101,26 @@ body {
   width: 1000px;
 }
 
-/* Message Form */
+/* Message input form container */
 .message_form {
   display: flex;
-  gap: 10px;
+  gap: 10px;  /* Space between input and button */
 }
 
+/* Text input for message */
 .message_form__input {
-  flex: 1;
+  flex: 1; /* Takes up all available horizontal space */
   padding: 10px;
   font-size: 16px;
 }
 
+/* Send button */
 .message_form__button {
   padding: 10px 20px;
   font-size: 16px;
 }
 
-/* Typing Indicator */
+/* Typing indicator fixed position near bottom */
 #typing-indicator {
   position: fixed;
   bottom: 10px;
@@ -140,6 +146,7 @@ body {
   overflow-y: auto;
 }
 
+/* List of conversation starter prompts */
 .right-sidenav h4 {
   color: #fff;
   margin-bottom: 15px;
@@ -160,6 +167,7 @@ body {
   cursor: pointer;
 }
 
+/* Modal overlay styling */
 .modal {
   position: fixed;
   top: 0;
@@ -170,9 +178,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1000;
+  z-index: 1000; /* High overlay */
 }
 
+/* Modal content box */
 .modal-content {
   background: white;
   padding: 30px;
@@ -180,6 +189,7 @@ body {
   text-align: center;
 }
 
+/* Username input field */
 #usernameInput {
   padding: 10px;
   font-size: 16px;
@@ -187,6 +197,7 @@ body {
   width: 80%;
 }
 
+/* Enter chat button */
 #enterChatBtn {
   padding: 10px 20px;
   margin-top: 15px;
@@ -194,6 +205,7 @@ body {
   cursor: pointer;
 }
 
+/* System message styling */
 .system__message {
   text-align: center;
   color: #888;
