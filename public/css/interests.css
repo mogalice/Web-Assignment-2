@@ -1,19 +1,19 @@
-/* Global Reset */
+/* Main fonts/design */
 * {
   padding: 0;
   margin: 0;
   outline: none;
   border: none;
-  font-family: sans-serif; /* Set font */
-  color: white; /* Default white */
+  font-family: sans-serif;
+  color: white; 
 }
 
-/* Body Styles */
+/* Body design */
 body {
   background-color: black;
 }
 
-/* Section Styles */
+/* Section design */
 section {
   display: flex;
   justify-content: center; /* Center horizontally */
@@ -22,21 +22,21 @@ section {
   height: 100vh; /* Full viewport height */
 }
 
-/* background section */
+/* background sections */
 section {
   background-image: url(../images/wave2.jpeg); 
   background-position: center; 
   background-size: cover; /* image covers the whole section */
-  background-repeat: no-repeat; /* Prevent repeating */
+  background-repeat: no-repeat; /* Prevent repeating in one section*/
 }
 
-/* transparent background containers */
+/* in front of background containers */
 .section-box {
-  background-color: rgba(255, 255, 255, 0.15); /* Semi-transparent white background */
+  background-color: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(8px); 
   border: 2px solid rgba(255, 255, 255, 0.2); 
   box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.2); 
-  border-radius: 30px; /* Rounded corners */
+  border-radius: 30px; 
   height: 85vh; 
   width: 85%; 
   overflow: hidden; /* no content leakage */
@@ -68,13 +68,13 @@ header {
 nav {
   display: flex;
   align-items: center;
-  gap: 40px; /* Space between nav items */
-  z-index: 2; /* nav stays above other elements */
+  gap: 40px; /* between nav items */
+  z-index: 2; /* nav above other elements */
 }
 
 .nav-items {
   font-size: 18px; 
-  font-weight: 500; /* Medium bold weight */
+  font-weight: 500; /* Medium bold */
   letter-spacing: 1px; 
   text-transform: capitalize; 
   cursor: pointer; /* Pointer cursor on hover */
@@ -84,12 +84,12 @@ nav {
   justify-content: center; /* Center text in nav item */
 }
 
-/* Active state for nav items */
+/* Active nav items */
 nav .active {
-  color: #0000ff; /* Change active nav item color */
+  color: #0000ff; 
 }
 
-/* Nav item underline effect */
+/* Nav item underline*/
 .nav-items::after {
   content: '';
   position: absolute;
@@ -103,15 +103,15 @@ nav .active {
   transition: 0.3s; 
 }
 
-/* Hover effect for nav items */
+/* Hover effect nav items */
 .nav-items:hover::after {
   transform: scale(1); /* Scale underline on hover */
 }
 
-/* Active nav item hover effect */
+/* Active nav hover effect */
 .active:hover::after {
-  background-color: #0000ff; /* Change underline color for active state */
-  box-shadow: 0 0 5px #0000ff; /* Blue shadow for active underline */
+  background-color: #0000ff; 
+  box-shadow: 0 0 5px #0000ff; 
 }
 
 /* About Section Styles */
@@ -123,7 +123,7 @@ nav .active {
 }
 
 .about-img {
-  width: 90%; /* Make the image 90% of the container width */
+  width: 90%;
   animation: zoomIn 1.4s ease-in-out forwards; /* Image animation */
   animation-delay: 0.2s; 
   opacity: 0; 
@@ -140,7 +140,7 @@ nav .active {
   align-items: center; /* Center content horizontally on the right grid */
 }
 
-/* Section Sub-heading Styles */
+/* Sub-heading Styles */
 .section-sub {
   font-size: 1.5rem; /* Font size for sub-heading */
   font-weight: 600; 
@@ -152,7 +152,7 @@ nav .active {
   opacity: 0; 
 }
 
-/* Section Title Styles */
+/* Title Styles */
 .section-title {
   font-size: 4rem; 
   line-height: 1.2; 
@@ -176,7 +176,7 @@ nav .active {
   opacity: 0; 
 }
 
-/* Extra Section Styles */
+/* Extra Section */
 #extra .content-wrap {
   display: flex;
   flex-direction: column;
@@ -198,15 +198,15 @@ nav .active {
 .columns {
   display: flex;
   gap: 2rem; /* Space between columns */
-  flex-wrap: wrap; /* Allow wrapping on small screens */
+  flex-wrap: wrap; /* wrapping on small screens */
   padding: 100px; 
 }
 
 .column {
-  flex: 1; /* Flex grow for columns */
+  flex: 1; /* grow for columns */
   min-width: 250px; /* Minimum for responsive design */
 }
 
 .column-img {
-  width: 800px; /*image width */
+  width: 800px;
 }
