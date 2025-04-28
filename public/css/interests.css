@@ -210,3 +210,65 @@ nav .active {
 .column-img {
   width: 800px;
 }
+
+/* Tablet and Mobile */
+@media screen and (max-width: 1024px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+    padding: 30px 20px;
+  }
+
+  .columns {
+    padding: 30px 20px;
+  }
+
+  .header-logo {
+    font-size: 28px;
+  }
+
+  nav {
+    gap: 20px;
+  }
+
+  .nav-items {
+    font-size: 16px;
+  }
+
+  .section-title {
+    font-size: 2.8rem;
+  }
+
+  .section-box {
+    width: 95%;
+    height: auto;
+  }
+
+  .about-img {
+    width: 80%;
+  }
+}
+
+/* Small devices (phones) */
+@media screen and (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .content-wrap {
+    padding: 20px;
+  }
+
+  .section-title {
+    font-size: 2.4rem;
+  }
+
+  .section-sub {
+    font-size: 1.2rem;
+  }
+}

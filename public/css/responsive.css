@@ -222,37 +222,47 @@
 
 /* Laptop (Min-width: 1280px and Max-width: 1919px) */
 @media screen and (min-width: 1280px) and (max-width: 1919px) {
-  .header-logo {
-    font-size: 28px; /* Slightly larger logo */
+  section {
+    padding: 100px 0;
   }
 
-  .nav-items {
-    font-size: 16px; /* Font size adjustment */
+  .section-box {
+    height: auto;
   }
 
-  .hero-content h3 {
-    font-size: 1.7rem; /* Adjust size of sub-heading */
+  header {
+    display: flex;
+    flex-direction: row; /* Stack header items horizontally */
+    justify-content: space-between; /* Space out logo and nav */
+    align-items: center; /* Align vertically */
+    padding: 0 50px; /* Add some horizontal padding */
   }
 
-  .hero-content h1 {
-    font-size: 6rem; /* Maintain large hero heading */
-    letter-spacing: 20px; /* Adjust letter spacing */
+  nav {
+    display: flex;
+    flex-direction: row; /* Nav items side-by-side */
+    gap: 40px; /* Space between nav items */
   }
 
-  .hero-img {
-    width: 50%; /* Make image half the width */
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 80px 0;
   }
 
-  .hero-btn {
-    margin-top: -120px; /* Adjust button position */
+  .content-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 50px;
+    padding: 100px 5%;
   }
 
-  .section-title {
-    font-size: 3.2rem; /* Section title size */
-    margin-bottom: 20px; /* Space below title */
-  }
-
-  #join-us .content-wrap {
-    height: auto; /* Set content wrap height to auto */
+  .footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four columns footer */
+    gap: 30px;
+    margin: 0 100px;
   }
 }
