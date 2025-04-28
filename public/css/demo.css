@@ -167,28 +167,6 @@ body {
   cursor: pointer;
 }
 
-/* Modal overlay styling */
-.modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000; /* High overlay */
-}
-
-/* Modal content box */
-.modal-content {
-  background: white;
-  padding: 30px;
-  border-radius: 8px;
-  text-align: center;
-}
-
 /* Username input field */
 #usernameInput {
   padding: 10px;
